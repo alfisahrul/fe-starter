@@ -4,6 +4,8 @@ import { compare } from 'bcrypt-ts';
 import { getUser } from 'app/db';
 import { authConfig } from 'app/auth.config';
 
+console.log("AUTH_SECRET:", process.env.AUTH_SECRET); 
+
 export const {
   handlers: { GET, POST },
   auth,
@@ -11,6 +13,7 @@ export const {
   signOut,
 } = NextAuth({
   ...authConfig,
+  secret: process.env.AUTH_SECRET, //
   providers: [
     Credentials({
       async authorize({ email, password }: any) {
