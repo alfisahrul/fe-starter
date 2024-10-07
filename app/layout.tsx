@@ -1,12 +1,12 @@
-import './globals.css';
-
-import { GeistSans } from 'geist/font/sans';
+import './styles/globals.css';
+import type {Metadata} from 'next'
+// import { GeistSans } from 'geist/font/sans';
 
 let title = 'Next.js + Postgres Auth Starter';
 let description =
   'This is a Next.js starter kit that uses NextAuth.js for simple email + password login and a Postgres database to persist the data.';
 
-export const metadata = {
+export const metadata: Metadata = {
   title,
   description,
   twitter: {
@@ -24,7 +24,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={GeistSans.variable}>{children}</body>
+      <body className="root">
+        {children}
+      </body>
+      
+      {/* <body className={GeistSans.variable}>{children}</body> */}
     </html>
   );
 }
