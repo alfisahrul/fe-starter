@@ -1,1 +1,1 @@
-export { GET, POST } from '@/app/pages/auth/auth';
+export { GET, POST } from '@/app/pages/api/auth/auth';

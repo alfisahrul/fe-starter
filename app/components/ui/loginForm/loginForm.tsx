@@ -1,4 +1,4 @@
-export function Form({
+export function LoginForm({
   action,
   children,
 }: {

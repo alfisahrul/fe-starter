@@ -1,4 +1,4 @@
-import { auth, signOut } from '@/app/pages/auth/auth';
+import { auth, signOut } from '@/app/pages/api/auth/auth';
 
 export default async function ProtectedPage() {
   let session = await auth();
